@@ -40,7 +40,8 @@ body * {
 
 /*Medidas do container principal*/
 .container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   height: 712px;
   margin: auto;
   text-align: center;
