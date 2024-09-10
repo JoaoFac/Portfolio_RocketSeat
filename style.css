@@ -34,6 +34,8 @@ body {
   align-items: center;
   background: var(--bg-url) no-repeat top center/cover; 
   height: 100vh;
+  margin: 0; 
+  padding-top: 50px;
 }
 
 /*Fonte utilizada na página*/
@@ -48,6 +50,7 @@ body * {
   max-width: 588px;
   height: 712px;
   text-align: center;
+  margin-top: 50px; 
 }
 
 /*Medidas da div redonda para a foto de perfil*/
