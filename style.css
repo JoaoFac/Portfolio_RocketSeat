@@ -27,9 +27,13 @@
   --switch-bg-url: url(./assets/suns.svg);
 }
 
-/*Backgorund da página*/
+/*Background da página*/
 body { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--bg-url) no-repeat top center/cover; 
+  height: 100vh;
 }
 
 /*Fonte utilizada na página*/
@@ -43,9 +47,7 @@ body * {
   width: 100%;
   max-width: 588px;
   height: 712px;
-  margin: auto;
   text-align: center;
-  margin: 56px auto 0px;
 }
 
 /*Medidas da div redonda para a foto de perfil*/
