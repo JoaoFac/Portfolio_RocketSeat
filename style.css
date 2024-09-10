@@ -1,0 +1,173 @@
+/*Reset do CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Definindo a cor padrão dos textos e bordas do light mode*/
+:root{
+  --text-color: white;
+  --bg-url: url(./assets/bg-desktop.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon_stars.svg);
+}
+
+
+.light_mode {
+  --text-color: black;
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/suns.svg);
+}
+
+/*Backgorund da página*/
+body { 
+  background: var(--bg-url) no-repeat top center/cover; 
+}
+
+/*Fonte utilizada na página*/
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+/*Medidas do container principal*/
+.container {
+  width: 360px;
+  height: 712px;
+  margin: auto;
+  text-align: center;
+  margin: 56px auto 0px;
+}
+
+/*Medidas da div redonda para a foto de perfil*/
+.profile {
+  width: 150px; /* Largura da div */
+  height: 150px; /* Altura da div */
+  border-radius: 50%; /* Torna a div redonda */
+  border: 2px solid white; /* Borda branca*/
+  background-image: url('assets/joaofac_profile-removebg-preview.jpg'); /* Preenche a div com a imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a div */
+  background-position: center; /* Centraliza a imagem dentro da div */
+  overflow: hidden; /* Garante que a imagem não saia da div */
+  margin: 0 auto; /* Centraliza a div dentro de seu contêiner pai, se necessário */
+  padding: 24px;
+}
+
+/*Medidas e estilos para o nome da conta abaixo da foto de perfil*/
+.account_name {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+/*Posicionamento do switch*/
+.switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+/*Estilização do button do switch*/
+.switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light_mode .switch button {
+  right: 0;
+  left: initial;
+}
+
+/*Estilização do track do switch*/
+.switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Medidas e estilos para a listagem dos links*/
+.container_links{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 0;
+}
+
+/*Medidas e estilos para os itens da listagem de links*/
+.container_items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color); 
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+/*Estilização dos links e da caixa, para que ao clicar em qualquer parte da caixa, o link seja aberto*/
+.link_style{
+  text-decoration: none;
+  padding: 16px 90px;
+  font-weight: 500;
+}
+
+/*Inserção e estilização do hover*/
+.container_items:hover{
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*Estilização dos ícones abaixo dos links*/
+.social_links{
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+/*Alinhamento dos itens*/
+.social_links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+/*Inserção e estilização do hover dos ícones*/
+.social_links a:hover{
+  background: var(--highlight-color);
+}
+
+/*Estilização do footer*/
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 15px;
+}
